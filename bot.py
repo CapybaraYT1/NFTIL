@@ -27,7 +27,7 @@ menu = ReplyKeyboardMarkup(resize_keyboard=True)
 menu.add(
     KeyboardButton(
         "🚀 Открыть NFT SIM",
-        web_app=WebAppInfo(url="nftil-production.up.railway.app")
+        web_app=WebAppInfo(url="https://nftil-production.up.railway.app/")
     )
 )
 
