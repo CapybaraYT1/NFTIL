@@ -21,9 +21,15 @@ def save_data(data):
     with open(DB_FILE, "w") as f:
         json.dump(data, f, indent=2)
 
+from aiogram.types import ReplyKeyboardMarkup, KeyboardButton, WebAppInfo
+
 menu = ReplyKeyboardMarkup(resize_keyboard=True)
-menu.add("🎁 Подарки")
-menu.add("🎒 Инвентарь")
+menu.add(
+    KeyboardButton(
+        "🚀 Открыть NFT SIM",
+        web_app=WebAppInfo(url="https://ТВОЙ-ССЫЛКА")
+    )
+)
 
 @dp.message_handler(commands=["start"])
 async def start(msg: types.Message):
